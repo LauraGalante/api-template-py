@@ -5,8 +5,6 @@ router = APIRouter()
 
 @router.get("/", response_model=None)
 async def root():
-    return {"API Coin Nodes Group": "More information dev@coinnodes.tech!",
-            "API Version": "1.0.0",
-            "API Documentation": "https://app.coinnodes.tech/",
-            "API Status": "OK",
-            "ROOT": "/docs"}
+    return {"API Test-laula": "This is my test api. My husband obligate me to do this pls call 911."
+
+            }

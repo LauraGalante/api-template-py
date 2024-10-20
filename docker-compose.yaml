@@ -1,0 +1,23 @@
+networks:
+  infrastructure-modules:
+    external: true
+
+services:
+  app:
+    container_name: app
+    ports:
+      - "80:80"
+    environment:
+      APP_NAME: Test-API-LAULA
+      ENV: local
+      WS: staging
+      ROOT_PATH: /
+      API_V1_STR: /api/v1
+      API_V1_INT: 1
+      DOCS_URL: /docs
+      REDOCS_URL: /redocs
+      DATABASE_URI: /
+    volumes: 
+      - .:/app
+    build: 
+      context: .
